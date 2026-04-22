@@ -1,0 +1,66 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CloudTrailReadAccess",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:LookupEvents",
+                "cloudtrail:GetTrailStatus",
+                "cloudtrail:DescribeTrails"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "EC2ReadAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSecurityGroupRules"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SecretsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "secretsmanager:GetSecretValue"
+            ],
+            "Resource": "arn:aws:secretsmanager:*:*:secret:cloudtrail-investigator/*"
+        },
+        {
+            "Sid": "SecurityHubAccess",
+            "Effect": "Allow",
+            "Action": [
+                "securityhub:BatchImportFindings"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SESAccess",
+            "Effect": "Allow",
+            "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "BedrockAccess",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:InvokeModel",
+                "bedrock:InvokeModelWithResponseStream"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "STSAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sts:GetCallerIdentity"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
