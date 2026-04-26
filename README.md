@@ -754,6 +754,6 @@ This lab is accompanied by a 2-part YouTube series: **AI Security Investigator**
 | Video | Title |
 |---|---|
 | [Part 1](https://youtu.be/vT3SmsaxAMY) | Watch an AI Agent Investigate AWS |
-| [Part 2] | What's inside an AI agent? |
+| [Part 2](https://youtu.be/e-m5EXwngXw) | What's inside an AI agent? |
 
 ---
